@@ -1,0 +1,9 @@
+<app-steps-aside [currentStep]="currentStep"></app-steps-aside>
+<h3>CONTAINER</h3>
+"{{currentStep}}" step
+<app-first *ngIf="currentStep == 'one'"></app-first>
+<app-second *ngIf="currentStep == 'two'"></app-second>
+<app-third *ngIf="currentStep == 'three'"></app-third>
+
+<button (click)="prev()" *ngIf="currentStep !== 'one'">Prev</button>
+<button (click)="next()" *ngIf="currentStep !== 'three'">Next</button>

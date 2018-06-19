@@ -1,0 +1,7 @@
+<h3>ASIDE</h3>
+"{{currentStep}}" step
+<ul>
+  <li *ngFor="let step of steps" [id]="step" [class]="step == currentStep ? 'active' : ''">
+    {{step}}
+  </li>
+</ul>
