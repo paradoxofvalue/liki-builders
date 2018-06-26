@@ -51,6 +51,11 @@ export class FirstComponent implements OnInit {
     this.http.getData()
       .subscribe(result => {
         this.buildingComplex = <BuildingComplex>result;
+        this.buildingComplex.images.forEach(item => {
+          let temp = item.date.split('.');
+          let date = new Date(+temp[2], +temp[1]-1, +temp[0]);
+          item.date = date;
+        })
       })
     this.initMap();
   }

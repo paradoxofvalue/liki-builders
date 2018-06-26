@@ -39,6 +39,6 @@ export class PhotoUploaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  date = new FormControl(moment(new Date('27.06.1995')).format());
+  date = new FormControl(moment().format());
 
 }
